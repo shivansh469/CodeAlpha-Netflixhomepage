@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="netflixcss.css">
+    <title>Netflix - Watch TV Shows Online, Watch Movies</title>
+</head>
+<body>
+    <span id="main">
+    <header class="netflix-logo">
+        <div class="netflix-header">
+            <img src="https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940" alt="Netflix Logo">
+            <button class="btn btn-rounded"><span onclick="displayButton()" >Sign in</span></button>
+        </div>
+        <div class="netflix-content">
+            <h1>Unlimited movies, TV <br> shows and more.</h1>
+            <p class="p-top">Watch anywhere. Cancel anytime.</p>
+            <p class="p-bot">Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="get-started">
+                <input type="text" placeholder="Email address">
+                <div class="gs">
+                <button type="button" class="get-started-button" onclick="displayButton()">Get Started</button>
+                <i class="fa fa-angle-right"></i>
+            </div> 
+            </div>
+        </div>
+    </header>
+
+    <hr>
+    </span>
+      <div class="final closed" id="final">
+          <div class="buttons">
+            <button class="btn transparent" id="sign-out-btn">Sign out</button>
+        </div>
+            <div class="submit">
+         <form action="">
+             <p>Sign In</p>
+             <input type="text" id="email" placeholder="Email" required>
+             <input type="text" id="psw" placeholder="Password" title="Must contain at least one number, one uppercase, lowercase letter and at least 8 or more characters." required>
+             <button id="submit">Sign in</button>
+         </form>
+        </div>
+         <p id="thank-you"></p>
+        </div>
+        
+
+        <hr>
+
+    <section class="kids">
+        <div class="container">
+            <div class="left-part">
+                <img src="data:image/png;base64,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" alt="Kids Logo">
+            </div>
+            <div class="right-part">
+                <h1>Create profiles for kids.</h1>
+                <p>Send kids on adventures with their favourite characters in a space made for them— free with your membership.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="enjoy">
+        <div class="enjoy-text">
+            <h1>Enjoy on your TV.</h1>
+            <p>Watch on smart TVs, Playstation,
+                Xbox, Chromecast, Apple TV, Blu-ray
+                players and more.</p>
+        </div>
+            <div class="enjoy-img">
+                <img src="https://images.unsplash.com/photo-1643208589889-0735ad7218f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="TV Image">
+                <div class="enjoy-video">
+                    <video src="img/video-tv.m4v" autoplay playsinline muted loop></video>
+                </div>
+            </div>
+    </section>
+
+    <hr>
+
+    <section class="download">
+        <div class="mobile">
+            <img class="mobile-img" src="https://png.pngtree.com/png-vector/20220611/ourmid/pngtree-netflix-mobile-application-on-the-cellphone-screen-png-image_4988835.png" alt="Downloads">
+            <div class="box">
+                <div>
+                    <img src="https://images.static-bluray.com/products/20/50248_7_large.jpg" alt="BoxShot">
+                </div>
+                <div>
+                    <h2>Stranger Things</h2>
+                    <p>Downloading...</p>
+                </div>
+                <div>
+                    <img class="gif" src="https://upload.wikimedia.org/wikipedia/en/7/78/Stranger_Things_season_4.jpg" alt="Download Gif">
+                </div>
+            </div>
+        </div>
+        <div class="download-content">
+            <h1>Download your shows to watch offline.</h1>
+            <p>Save your favourites easily and always have something to watch.</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="stream">
+        <div class="stream-content">
+            <h1>Watch Everywhere.</h1>
+            <p>Stream unlimited movies and TV
+                shows on your phone, tablet, laptop,
+                and TV.</p>
+        </div>
+            <div class="mac">
+                <img class="tv-mac" src="https://images.unsplash.com/photo-1643208589889-0735ad7218f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="Mac">
+                <div class="tv-2">
+                    <video src="img/video-tv2.m4v" autoplay muted loop playsinline></video>
+                    
+                </div>
+            </div>
+    </section>
+
+    <hr>
+
+    <div>
+        <section class="freq">
+            <h1>Frequently Asked Questions</h1>
+            <div class="questions">
+                <button type="button">What is Netflix? <span class="toggle1" onclick="toggle1()" id="rot1">+</span></button>
+                <div class="faq-answer closed" id="ans1">
+                    <span>
+                        Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more - on thousands of internet-connected devices.
+                        <br>
+                        <br>
+                        You can watch as much as you want, whenever you want, without a single ad - all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!
+                    </span>
+                </div>
+                <button type="button">How much does Netflix cost? <span onclick="toggle3()" id="rot3">+</span></button>
+                <div class="faq-answer closed" id="ans3">
+                    <span>
+                        Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₦2,900 to ₦4,400 a month. No extra costs, no contracts.
+                    </span>
+                </div>
+                <button type="button">Where can I watch? <span onclick="toggle4()" id="rot4">+</span></button>
+                <div class="faq-answer closed" id="ans4">
+                    <span>
+                        Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+                        <br>
+                        <br>
+                        You can also download your favorite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.
+                    </span>
+                </div>
+                <button type="button">How do I cancel? <span onclick="toggle5()" id="rot5">+</span></button>
+                <div class="faq-answer closed" id="ans5">
+                    <span>
+                        Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.
+                    </span>
+                </div>
+                <button type="button">What can I watch on Netflix? <span onclick="toggle6()" id="rot6">+</span></button>
+                <div class="faq-answer closed" id="ans6">
+                    <span>
+                       Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
+                    </span>
+                </div>
+            </div>
+            <p class="p-b">Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="get-started sec">
+                <input type="text" placeholder="Email address">
+                <div class="gs">
+                <button type="button" class="get-started-button">Get Started</button>
+                <i class="fa fa-angle-right"></i>
+            </div> 
+            </div>
+            
+        </section>
+        
+            
+        
+    </div>
+    
+    
+    <hr>
+
+    <footer class="footer">
+        <p>Questions? Contact us.</p>
+        <div class="footer-column">
+             <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Investor Relations</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Speed Test</a></li>            
+            </ul>
+            <ul>
+                <li><a href="#">Help Centre</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Cookie Preferences</a></li>
+                <li><a href="#">Legal Notices</a></li>            
+            </ul>
+             <ul>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Ways to watch</a></li>
+                <li><a href="#">Corporate Information</a></li>
+                <li><a href="#">Netflix Originals</a></li>            
+            </ul>
+             <ul>
+                <li><a href="#">Media Centre</a></li>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">Contact US</a></li>            
+            </ul>
+        </div>
+        <div class="last">
+            <a href="#"><i class="fas fa-globe btn-icon"></i> English <i class="fas fa-caret-down btn-icon"></i></a>
+            <p>Netflix Nigeria</p>
+        </div>
+    </footer>
+
+     <script src="javascript netflix.js"></script>
+</body>
+</html>
